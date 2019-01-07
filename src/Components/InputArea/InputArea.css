@@ -1,4 +1,7 @@
-.textArea{
+.textArea {
   display: flex;
-  justify-content: center
+  justify-content: center;
+}
+.sentences {
+  width: 11%;
 }
