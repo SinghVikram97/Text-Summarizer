@@ -14,7 +14,7 @@ class App extends Component {
     let inputText = text.inputText;
     let numSentences = text.numSentences;
     console.log(numSentences);
-    fetch("http://localhost:4000/summary", {
+    fetch("https://secret-temple-96441.herokuapp.com/summary", {
       method: "post",
       headers: {
         "Content-Type": "application/json"
