@@ -11,12 +11,26 @@ class App extends Component {
   };
 
   summarizeContent = text => {
-    let summary = text.inputText;
+    let inputText = text.inputText;
     let numSentences = text.numSentences;
     console.log(numSentences);
-    this.setState({
-      summary: summary
-    });
+    fetch("http://localhost:4000/summary", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        inputText: inputText,
+        numSentences: numSentences
+      })
+    })
+      .then(response => response.json())
+      .then(summary => {
+        summary = summary.slice(2, summary.length - 2);
+        this.setState({
+          summary: summary
+        });
+      });
   };
 
   render() {
