@@ -23,9 +23,9 @@ class App extends Component {
 
   render() {
     return ( <div className = "App pl-0" >
-      <Navbar / >
-      <InputArea summarizeContent={this.summarizeContent}/>
-      <p>{this.state.summary}</p>
+        <Navbar / >
+        <InputArea summarizeContent={this.summarizeContent}/>
+        <SummarizedText summary={this.state.summary}/>
       </div>
     );
   }

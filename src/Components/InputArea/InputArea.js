@@ -21,7 +21,7 @@ export default class InputArea extends Component {
 
   render() {
     return (
-    <div className="textArea">
+    <div className="textArea ma5">
         <form className="pa4 black-80" onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="comment" className="f3 b db mb2">Content</label>
